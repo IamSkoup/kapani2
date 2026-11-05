@@ -1,4 +1,4 @@
-name: Check and publish Kapani
+name: Check Kapani
 on:
   push:
     branches: [main]
@@ -7,7 +7,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: kapani-pages-${{ github.ref }}
+  group: kapani-check-${{ github.ref }}
   cancel-in-progress: false
 jobs:
   check:
@@ -19,21 +19,3 @@ jobs:
       - run: npm run check
       - run: npm test
       - run: npm run package:pages
-      - uses: actions/upload-pages-artifact@v3
-        if: github.ref == 'refs/heads/main'
-        with:
-          path: dist
-  deploy:
-    if: github.ref == 'refs/heads/main'
-    needs: check
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - uses: actions/configure-pages@v5
-      - uses: actions/deploy-pages@v5
-        id: deployment
