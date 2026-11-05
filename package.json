@@ -1,0 +1,21 @@
+{
+  "name": "kapani-new",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "node scripts/check.mjs",
+    "build": "esbuild node_modules/@supabase/supabase-js/dist/index.mjs --bundle --format=esm --platform=browser --minify --outfile=public/vendor/supabase.js",
+    "package:pages": "node scripts/package-pages.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12",
+    "jsdom": "26.1.0",
+    "prettier": "3.6.2",
+    "supabase": "3.0.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.118.0",
+    "leaflet": "1.9.4"
+  }
+}

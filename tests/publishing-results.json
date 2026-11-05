@@ -1,0 +1,29 @@
+{
+  "ran_at": "2026-11-04T12:07:45Z",
+  "tests": [
+    {
+      "name": "Resident cannot publish, read draft or open its discussion",
+      "passed": true
+    },
+    {
+      "name": "Published news is readable, views deduplicate, discussion accepts messages",
+      "passed": true
+    },
+    {
+      "name": "Archiving revokes discussion access even for former participants",
+      "passed": true
+    },
+    {
+      "name": "Concurrent final-seat registration admits exactly one resident, retry is safe",
+      "passed": true
+    },
+    {
+      "name": "Cancelled event rejects registration",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "No browser editor or event-result UI verification yet",
+    "QA news archived and event cancelled; history retained"
+  ]
+}

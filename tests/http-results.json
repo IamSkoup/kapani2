@@ -1,0 +1,38 @@
+{
+  "ran_at": "2026-11-04T07:12:16Z",
+  "project": "svxgjisrkagmqjamnexp",
+  "tests": [
+    {
+      "name": "Four real Auth password sign-ins",
+      "passed": true
+    },
+    {
+      "name": "Concurrent duplicate transfer: single debit and money conservation",
+      "passed": true
+    },
+    {
+      "name": "HTTP RLS: foreign wallets hidden, balance write and role escalation denied",
+      "passed": true
+    },
+    {
+      "name": "HTTP RLS: private message visible to participant only",
+      "passed": true
+    },
+    {
+      "name": "Concurrent final-unit purchases: exactly one order succeeds",
+      "passed": true
+    },
+    {
+      "name": "Order refund and repeated cancellation are idempotent",
+      "passed": true
+    },
+    {
+      "name": "Auth refresh restores the same account",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "QA accounts seeded via SQL, not the public signup form",
+    "No email delivery, browser session or Storage coverage in this suite"
+  ]
+}

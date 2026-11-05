@@ -1,0 +1,42 @@
+{
+  "ran_at": "2026-11-04T07:20:12Z",
+  "tests": [
+    {
+      "name": "Authenticated upload with reserved size and type",
+      "passed": true
+    },
+    {
+      "name": "Unsent draft attachment hidden even from conversation participant",
+      "passed": true
+    },
+    {
+      "name": "Attachment message persists and retries without duplication",
+      "passed": true
+    },
+    {
+      "name": "Participant can download private file through expiring signed URL",
+      "passed": true
+    },
+    {
+      "name": "Nonparticipant cannot read metadata, sign or download attachment",
+      "passed": true
+    },
+    {
+      "name": "Published attachment bytes cannot be replaced",
+      "passed": true
+    },
+    {
+      "name": "Unsupported MIME, wrong extension and oversized file rejected",
+      "passed": true
+    },
+    {
+      "name": "Deleted message no longer grants participant a new signed URL",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "MIME metadata checks are not malware scanning",
+    "Previously issued signed URLs remain usable until their short expiry",
+    "Test file and soft-deleted message retained"
+  ]
+}

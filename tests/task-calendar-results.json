@@ -1,0 +1,13 @@
+{
+  "passed": 4,
+  "assertions": [
+    "before Moscow midnight",
+    "at Moscow midnight",
+    "Monday boundary",
+    "one-time period fixed"
+  ],
+  "clock": "Explicit inputs to private pure function, system clock unchanged",
+  "ledger_unbalanced": 0,
+  "ledger_balance_mismatches": 0,
+  "observed_task_cron_successes": 4
+}

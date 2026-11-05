@@ -1,0 +1,10 @@
+node_modules/
+.env
+.env.*
+!*.example
+qa-private/
+__pycache__/
+dist/
+public/__qa/
+public/__layout-test.html
+supabase/.temp/

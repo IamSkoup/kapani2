@@ -1,0 +1,25 @@
+{
+  "ran_at": "2026-11-04T12:09:38Z",
+  "tests": [
+    {
+      "name": "Concurrent start creates one attempt and charges once",
+      "passed": true
+    },
+    {
+      "name": "Correct answers withheld until submit; another resident cannot access attempt",
+      "passed": true
+    },
+    {
+      "name": "Server grades correctly, submit is idempotent, answers and score cannot be changed after finish",
+      "passed": true
+    },
+    {
+      "name": "Administrative correction requires mayor and retains original result",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Timeout cron and real browser timer not yet verified",
+    "QA exam disabled after testing; history retained"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "ran_at": "2026-11-04T18:11:51Z",
+  "tests": [
+    {
+      "name": "Residents cannot create rewards, forge evidence or claim an incomplete task",
+      "passed": true
+    },
+    {
+      "name": "Concurrent claims create one immutable payment and exactly one wallet credit",
+      "passed": true
+    },
+    {
+      "name": "Other residents cannot read evidence or payments; neither recipient nor creator can bypass rules",
+      "passed": true
+    },
+    {
+      "name": "Suspension hides task, retains history, and repeated receipt never pays again",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Only publication condition exercised end-to-end in this suite",
+    "QA private post, disabled task and ledger retained",
+    "No cleanup-job photo workflow or public achievement rankings yet"
+  ]
+}

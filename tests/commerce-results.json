@@ -1,0 +1,26 @@
+{
+  "ran_at": "2026-11-04T18:24:27Z",
+  "tests": [
+    {
+      "name": "Foreign catalogue changes and substituted checkout prices rejected",
+      "passed": true
+    },
+    {
+      "name": "Concurrent last-stock checkout has one winner; replay and private order isolation pass",
+      "passed": true
+    },
+    {
+      "name": "Only buyer confirms ready order; concurrent receipt pays business once and records task event",
+      "passed": true
+    },
+    {
+      "name": "Dispute resolution requires independent mayor, returns funds and stock exactly once",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Pickup only; delivery not connected",
+    "Completed-order returns and partial refunds not implemented",
+    "QA product disabled; orders, evidence and financial history retained"
+  ]
+}

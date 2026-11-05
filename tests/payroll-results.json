@@ -1,0 +1,21 @@
+{
+  "ran_at": "2026-11-04T12:17:51Z",
+  "tests": [
+    {
+      "name": "Business cannot pay salary without funds; failed payment leaves no payroll entry",
+      "passed": true
+    },
+    {
+      "name": "Concurrent monthly payroll pays once, debits business and credits employee exactly",
+      "passed": true
+    },
+    {
+      "name": "Resignation revokes employee permissions immediately and preserves payment history",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Fixed monthly salary only; no prorating or automated debt accrual",
+    "Test organization and records retained"
+  ]
+}

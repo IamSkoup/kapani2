@@ -1,0 +1,26 @@
+{
+  "ran_at": "2026-11-05T09:30:06Z",
+  "tests": [
+    {
+      "name": "Concurrent real HTTP requests reserve one fare for one ride",
+      "passed": true
+    },
+    {
+      "name": "Resident cannot edit quote price or call privileged quote creation",
+      "passed": true
+    },
+    {
+      "name": "Concurrent cancellation returns reserve exactly once after committed requests",
+      "passed": true
+    },
+    {
+      "name": "Deployed routing endpoint explicitly refuses pricing without configured road provider",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Route is explicitly synthetic QA fixture, not a road provider verification",
+    "Cancelled ride, quote and ledger retained",
+    "Driver lifecycle covered separately by real database rollback test, not two-browser end-to-end"
+  ]
+}

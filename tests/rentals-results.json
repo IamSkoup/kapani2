@@ -1,0 +1,30 @@
+{
+  "ran_at": "2026-11-04T12:24:18Z",
+  "tests": [
+    {
+      "name": "Overlapping concurrent rentals create one lease and debit exactly once",
+      "passed": true
+    },
+    {
+      "name": "Foreign lease details and cancellation are denied",
+      "passed": true
+    },
+    {
+      "name": "Extension charges only once and preserves original payment records",
+      "passed": true
+    },
+    {
+      "name": "Cancellation before start returns full reserve once and releases availability",
+      "passed": true
+    },
+    {
+      "name": "Client cannot substitute a lower rental price",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Lifecycle cron at actual date boundary not yet exercised",
+    "Prepaid terms only, no arrears or monthly invoicing",
+    "Test property disabled and records retained"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "ran_at": "2026-11-04T18:24:09Z",
+  "tests": [
+    {
+      "name": "Deployed Edge Function authenticates nickname against real Supabase Auth",
+      "passed": true
+    },
+    {
+      "name": "Email login also authenticates without exposing lookup response",
+      "passed": true
+    },
+    {
+      "name": "Unknown and incorrect credentials share response; residents cannot call private email lookup",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "No SMTP registration/recovery delivery checked",
+    "CAPTCHA challenge UI is not configured",
+    "Direct Auth endpoints retain separate provider rate limits; Edge limiter covers this entry point"
+  ]
+}

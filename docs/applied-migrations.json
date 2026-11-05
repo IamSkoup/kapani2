@@ -1,0 +1,125 @@
+{
+  "project": "svxgjisrkagmqjamnexp",
+  "migrations": [
+    {
+      "version": "20261103220309",
+      "name": "kapani_core_202611040001",
+      "file": "20261103220309_kapani_core_202611040001.sql",
+      "sha256": "2608fca6dc7c7b9a0e559127c8ec39af02d592239a8e60393933303408badfd1"
+    },
+    {
+      "version": "20261103220521",
+      "name": "kapani_social_202611040002",
+      "file": "20261103220521_kapani_social_202611040002.sql",
+      "sha256": "a34f83b42337e6d11f236d8c437fa06ca5b0447c4abb301731018ff98cd4706a"
+    },
+    {
+      "version": "20261103220625",
+      "name": "kapani_market_202611040003",
+      "file": "20261103220625_kapani_market_202611040003.sql",
+      "sha256": "15bc3075cfd96f1cfc22bd5a469f6342a1afbc12a9ffa6fcf7f50d17c40c617b"
+    },
+    {
+      "version": "20261103221828",
+      "name": "kapani_civic_202611040004",
+      "file": "20261103221828_kapani_civic_202611040004.sql",
+      "sha256": "b5d98ce3d5b524acb214abbf1830f3f32fa660e66ab724cc6671ff2a7485c2f1"
+    },
+    {
+      "version": "20261103222222",
+      "name": "kapani_economy_202611040005",
+      "file": "20261103222222_kapani_economy_202611040005.sql",
+      "sha256": "e2126cdd6b5927cf4702d88cd0555b3d41744a63b6167264a87a14dad69a1986"
+    },
+    {
+      "version": "20261103222430",
+      "name": "kapani_cron_202611040006",
+      "file": "20261103222430_kapani_cron_202611040006.sql",
+      "sha256": "169fb14cf75530909cfee3a83f632eaa77e690cfe4e2c4ad0f76cb25a890e4c6"
+    },
+    {
+      "version": "20261104070946",
+      "name": "journal_commit_integrity",
+      "file": "20261104070946_journal_commit_integrity.sql",
+      "sha256": "7fa422b2c55efa7629a066ba3a4fb54253ec4f214170462f92e9484de8849010"
+    },
+    {
+      "version": "20261104071219",
+      "name": "private_attachments",
+      "file": "20261104071219_private_attachments.sql",
+      "sha256": "d8f3b0d7fce6095ee61c3d12c8a4bc97ab7b5a354dbe6617425d58f0f4f6d3ee"
+    },
+    {
+      "version": "20261104071501",
+      "name": "messenger_navigation",
+      "file": "20261104071501_messenger_navigation.sql",
+      "sha256": "edfbd0e6946a7a3676d3ac542f59b1d9488bebe0abe886df55d10dd6723d604a"
+    },
+    {
+      "version": "20261104071819",
+      "name": "storage_preflight_and_read_receipts",
+      "file": "20261104071819_storage_preflight_and_read_receipts.sql",
+      "sha256": "f7e513a1b4460e87f8d95df66536ca59062470a95aa94ac667bd8abf49b8b23c"
+    },
+    {
+      "version": "20261104072441",
+      "name": "publishing_and_events",
+      "file": "20261104072441_publishing_and_events.sql",
+      "sha256": "b1c7cfa6ef5948673e412ec9da439846885927df5201ec8cb78b90197855d31d"
+    },
+    {
+      "version": "20261104120531",
+      "name": "education_exams",
+      "file": "20261104120531_education_exams.sql",
+      "sha256": "22801da4bb3e4bfb5fbc98542f3eee9715ba28530afba3e8ff1735cfb14da48f"
+    },
+    {
+      "version": "20261104121425",
+      "name": "employment_and_payroll",
+      "file": "20261104121425_employment_and_payroll.sql",
+      "sha256": "4d67396425bb96bf26a0a273f8179ce8d6f2b434b0e31075e437342906c411a7"
+    },
+    {
+      "version": "20261104122114",
+      "name": "buildings_and_leases",
+      "file": "20261104122114_buildings_and_leases.sql",
+      "sha256": "31c896216bfe6ec51a140dab4d75e1dae4b3f2eb0cb22b35ef1fdda96e1bab46"
+    },
+    {
+      "version": "20261104180812",
+      "name": "verified_tasks",
+      "file": "20261104180812_verified_tasks.sql",
+      "sha256": "d6e32b0d252437c0f99ff232b436ad1e08337bdb9db37f0790f3111ca8864519"
+    },
+    {
+      "version": "20261104181936",
+      "name": "business_commerce",
+      "file": "20261104181936_business_commerce.sql",
+      "sha256": "dbd7bb941a0bc77d5edbc53b9d4017676a259e3e38ea4aaaaa223b807ac5afd8"
+    },
+    {
+      "version": "20261104182248",
+      "name": "protected_login",
+      "file": "20261104182248_protected_login.sql",
+      "sha256": "61084bb752c00e18bb8d0d2d54f56eeaba8057a7146839460cfd819380b4feb3"
+    },
+    {
+      "version": "20261104182628",
+      "name": "village_map",
+      "file": "20261104182628_village_map.sql",
+      "sha256": "095c22a849b65eaa7e105e1f0eeadd5b6f786a2941197d64237b73b822047065"
+    },
+    {
+      "version": "20261104183527",
+      "name": "taxi_service",
+      "file": "20261104183527_taxi_service.sql",
+      "sha256": "b6f9b4b56a383cb486096adb05b4d88078b4a38c6d5009fab1eebcbb7deb2bcf"
+    },
+    {
+      "version": "20261104183707",
+      "name": "taxi_route_guards",
+      "file": "20261104183707_taxi_route_guards.sql",
+      "sha256": "947a4466aad147e8d00b8095a751d508c1a4bdf81d4d733e79ec868eedcb942f"
+    }
+  ]
+}

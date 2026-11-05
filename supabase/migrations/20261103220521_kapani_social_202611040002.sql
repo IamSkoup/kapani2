@@ -1,0 +1,34 @@
+begin;
+create policy permissions_read on public.permissions for select to authenticated using(kapani_private.active());
+create policy role_permissions_read on public.role_permissions for select to authenticated using(kapani_private.active());
+grant insert,delete on public.post_comments,public.post_reactions to authenticated;
+grant update(body) on public.post_comments to authenticated;
+grant update(reaction) on public.post_reactions to authenticated;
+create policy comments_read on public.post_comments for select to authenticated using(kapani_private.active() and exists(select 1 from public.posts p where p.id=post_id));
+create policy comments_insert on public.post_comments for insert to authenticated with check(author_id=auth.uid() and kapani_private.active() and exists(select 1 from public.posts p where p.id=post_id));
+create policy comments_update on public.post_comments for update to authenticated using(author_id=auth.uid() and kapani_private.active()) with check(author_id=auth.uid());
+create policy comments_delete on public.post_comments for delete to authenticated using(author_id=auth.uid() and kapani_private.active());
+create policy reactions_read on public.post_reactions for select to authenticated using(kapani_private.active() and exists(select 1 from public.posts p where p.id=post_id));
+create policy reactions_insert on public.post_reactions for insert to authenticated with check(user_id=auth.uid() and kapani_private.active() and exists(select 1 from public.posts p where p.id=post_id));
+create policy reactions_update on public.post_reactions for update to authenticated using(user_id=auth.uid() and kapani_private.active()) with check(user_id=auth.uid());
+create policy reactions_delete on public.post_reactions for delete to authenticated using(user_id=auth.uid() and kapani_private.active());
+create function public.edit_message(p_id uuid,p_body text,p_delete boolean default false) returns void language plpgsql security definer set search_path='' as $$ begin
+ if not kapani_private.active() then raise exception 'Access denied';end if;
+ update public.messages set body=case when p_delete then 'Сообщение удалено' else p_body end,edited_at=now(),deleted_at=case when p_delete then now() else null end where id=p_id and author_id=auth.uid() and deleted_at is null;
+ if not found then raise exception 'Message unavailable';end if;
+end $$;
+revoke all on function public.edit_message(uuid,text,boolean) from public,anon;
+grant execute on function public.edit_message(uuid,text,boolean) to authenticated;
+grant update(read_at,pinned) on public.conversation_members to authenticated;
+create policy member_update on public.conversation_members for update to authenticated using(user_id=auth.uid() and kapani_private.active()) with check(user_id=auth.uid());
+create function kapani_private.message_notification() returns trigger language plpgsql security definer set search_path='' as $$ begin
+ insert into public.notifications(user_id,category,title,href) select user_id,'messages','Новое личное сообщение','#chat' from public.conversation_members where conversation_id=new.conversation_id and user_id<>new.author_id;
+ return new;
+end $$;
+revoke all on function kapani_private.message_notification() from public,anon,authenticated;
+create trigger message_notification after insert on public.messages for each row execute function kapani_private.message_notification();
+alter publication supabase_realtime add table public.messages,public.notifications,public.accounts;
+create index messages_author_time on public.messages(author_id,created_at desc);
+create index posts_timeline on public.posts(created_at desc,id);
+create index comments_post on public.post_comments(post_id,created_at);
+commit;
